@@ -1,6 +1,6 @@
 # LIBFT (by Carlos Rocha)
 
-## functions todo
+## Index Functions
 
 - [x] isalpha
 - [ ] isdigit
