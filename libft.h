@@ -6,7 +6,7 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 16:36:07 by caalbert          #+#    #+#             */
-/*   Updated: 2022/06/02 16:52:29 by caalbert         ###   ########.fr       */
+/*   Updated: 2022/06/02 19:30:28 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int ft_isapha(int c);
  * 
  * @return int 
  */
-int ft_isdigit();
+int ft_isdigit(int d);
 
 int ft_isalnum();
 
@@ -62,5 +62,3 @@ int ft_memcmp();
 int ft_strnstr();
 
 int ft_atoi();
-
-
