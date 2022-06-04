@@ -3,8 +3,8 @@
 ## Index Functions
 
 - [x] isalpha
-- [ ] isdigit
-- [ ] isalnum
+- [x] isdigit
+- [x] isalnum
 - [ ] isascii
 - [ ] isprint
 - [ ] strlen
