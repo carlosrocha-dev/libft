@@ -1,6 +1,6 @@
 <div align="center">
 
-![ft_printfn](https://user-images.githubusercontent.com/3737837/179274741-9122c328-d18f-4501-bda8-1c48098a60b8.png)
+![libftm](https://user-images.githubusercontent.com/3737837/181282947-962d510a-5e39-45d2-af6b-373186f12821.png)
 
 # libft
 
