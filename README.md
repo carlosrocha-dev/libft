@@ -1,11 +1,13 @@
 <div align="center">
+  
+  ![libft_banner](https://user-images.githubusercontent.com/3737837/184542143-9c91a7b9-c4ef-405e-995e-1b0cf10f6b56.jpg)
 
 ![libftm](https://user-images.githubusercontent.com/3737837/181282947-962d510a-5e39-45d2-af6b-373186f12821.png)
 
 # libft
 
 
-[![caalbert's 42 Libft Score](https://badge42.vercel.app/api/v2/cl5g4kxwa002509l0nrey4oz0/project/2606362)](https://github.com/JaeSeoKim/badge42)
+## [![caalbert's 42 Libft Score](https://badge42.vercel.app/api/v2/cl5g4kxwa002509l0nrey4oz0/project/2606362)](https://github.com/JaeSeoKim/badge42)
 
 </div>
 
