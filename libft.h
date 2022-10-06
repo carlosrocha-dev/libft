@@ -6,20 +6,43 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 04:39:39 by caalbert          #+#    #+#             */
-/*   Updated: 2022/06/28 19:25:35 by caalbert         ###   ########.fr       */
+/*   Updated: 2022/10/03 07:41:40 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+/******************************************************************************\
+* LIBS
+\******************************************************************************/
+
 # include <unistd.h>
+# include <stdarg.h>
 # include <stdlib.h>
+
+/******************************************************************************\
+* PREPROCESSORS
+\******************************************************************************/
+
+# define HEX_LOWER "0123456789abcdef"
+# define BUFFER_SIZE 1024
+# define MAX_FD 256
+
+
+/******************************************************************************\
+* STRUCTS
+\******************************************************************************/
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+/******************************************************************************\
+* FUNCTIONS
+\******************************************************************************/
 
 int		ft_isascii(int c);
 int		ft_isprint(int c);
@@ -64,5 +87,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int		ft_printf(const char *str, ...);
+int		parser_args(char str, va_list *buffer);
+int		return_char(char c);
+int		return_str(char *str);
+int		return_putchar(char c);
+int		pointer_to_hexa(int c);
+// size_t	ft_strlen(const char *s);
+int		return_int_dec(unsigned int c);
+int		return_unsigned(unsigned int c);
+int		return_hex(unsigned int n, int c);
+int		return_pointer(unsigned long int n);
+char	*get_next_line(int fd);
 
 #endif

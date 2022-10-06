@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   return_unsigned.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 03:31:41 by caalbert          #+#    #+#             */
-/*   Updated: 2022/06/29 23:32:35 by caalbert         ###   ########.fr       */
+/*   Created: 2022/08/21 20:30:48 by caalbert          #+#    #+#             */
+/*   Updated: 2022/08/22 02:48:37 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	return_unsigned(unsigned int c)
 {
-	unsigned char	*p;
+	int	size;
 
-	if (!s)
-		return (NULL);
-	p = s;
-	while (n--)
-		*p++ = (unsigned char) c;
-	return (s);
+	size = 0;
+	if (c >= 10)
+	{
+		size += return_unsigned(c / 10);
+		size += return_unsigned(c % 10);
+	}
+	if (c < 10)
+		size += return_char(c +48);
+	return (size);
 }

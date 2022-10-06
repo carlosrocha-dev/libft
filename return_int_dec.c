@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   return_int_dec.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 03:31:41 by caalbert          #+#    #+#             */
-/*   Updated: 2022/06/29 23:32:35 by caalbert         ###   ########.fr       */
+/*   Created: 2022/08/19 23:06:25 by caalbert          #+#    #+#             */
+/*   Updated: 2022/08/22 02:57:30 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	pointer_to_hexa(int c)
 {
-	unsigned char	*p;
+	long long	n;
+	int			size;
 
-	if (!s)
-		return (NULL);
-	p = s;
-	while (n--)
-		*p++ = (unsigned char) c;
-	return (s);
+	n = c;
+	size = 0;
+	if (n < 0)
+	{
+		size += return_putchar('-');
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		size += pointer_to_hexa(n / 10);
+		size += pointer_to_hexa(n % 10);
+	}
+	if (n < 10)
+		size += return_char(n + 48);
+	return (size);
 }

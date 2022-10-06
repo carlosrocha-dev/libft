@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   return_putchar.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 03:31:41 by caalbert          #+#    #+#             */
-/*   Updated: 2022/06/29 23:32:35 by caalbert         ###   ########.fr       */
+/*   Created: 2022/08/21 22:23:40 by caalbert          #+#    #+#             */
+/*   Updated: 2022/08/22 00:35:24 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	return_putchar(char c)
 {
-	unsigned char	*p;
-
-	if (!s)
-		return (NULL);
-	p = s;
-	while (n--)
-		*p++ = (unsigned char) c;
-	return (s);
+	write(1, &c, 1);
+	return (1);
 }

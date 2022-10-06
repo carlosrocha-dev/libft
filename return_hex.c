@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   return_hex.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 03:31:41 by caalbert          #+#    #+#             */
-/*   Updated: 2022/06/29 23:32:35 by caalbert         ###   ########.fr       */
+/*   Created: 2022/08/19 23:14:11 by caalbert          #+#    #+#             */
+/*   Updated: 2022/08/22 02:45:26 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	return_hex(unsigned int n, int c)
 {
-	unsigned char	*p;
+	int	size;
 
-	if (!s)
-		return (NULL);
-	p = s;
-	while (n--)
-		*p++ = (unsigned char) c;
-	return (s);
+	size = 0;
+	if (n >= 16)
+	{
+		size += return_hex(n / 16, c);
+		size += return_hex(n % 16, c);
+	}
+	if (n < 16)
+	{
+		if (n < 10)
+			size += return_char(n + 48);
+		else
+		{
+			if (c == 1)
+				size += return_char(n + 87);
+			else
+				size += return_char(n + 55);
+		}
+	}
+	return (size);
 }
