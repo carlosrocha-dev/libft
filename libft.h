@@ -6,7 +6,7 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 04:39:39 by caalbert          #+#    #+#             */
-/*   Updated: 2022/10/03 07:41:40 by caalbert         ###   ########.fr       */
+/*   Updated: 2023/02/02 10:09:28 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ char	*ft_strnstr(const char *str, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strcpy(char *dest, const char *src);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
