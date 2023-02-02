@@ -6,7 +6,7 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 09:59:59 by caalbert          #+#    #+#             */
-/*   Updated: 2023/02/02 10:12:54 by caalbert         ###   ########.fr       */
+/*   Updated: 2023/02/02 10:22:50 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *dest, const char *src)
 	size_t	i;
 	size_t	src_len;
 
-	src_len = strlen(src);
+	src_len = ft_strlen(src);
 	if (src_len >= (size_t)(dest - src))
 		return (NULL);
 	i = 0;
