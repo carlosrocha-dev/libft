@@ -6,7 +6,7 @@
 #    By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 10:10:19 by caalbert          #+#    #+#              #
-#    Updated: 2023/02/02 10:43:50 by caalbert         ###   ########.fr        #
+#    Updated: 2023/02/07 12:40:22 by caalbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,8 @@ $(NAME): 	$(OBJS)
 			@echo ""
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
-			mkdir -p $(OBJS_DIR)$
-			$(CC) $(CFLAGS) -c $< -o $@$
+			mkdir -p $(OBJS_DIR)
+			$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 			@$(RM) $(OBJS)
