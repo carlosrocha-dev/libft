@@ -6,7 +6,7 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 04:39:39 by caalbert          #+#    #+#             */
-/*   Updated: 2023/02/02 10:43:00 by caalbert         ###   ########.fr       */
+/*   Updated: 2023/03/04 23:48:00 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_bzero(void *s, size_t n);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
+int		ft_isspace(int c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *str, const char *little, size_t len);
