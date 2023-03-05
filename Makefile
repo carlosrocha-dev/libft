@@ -6,7 +6,11 @@
 #    By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 10:10:19 by caalbert          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2023/03/04 16:57:03 by caalbert         ###   ########.fr        #
+=======
+#    Updated: 2023/03/04 23:51:48 by caalbert         ###   ########.fr        #
+>>>>>>> refs/remotes/origin/main
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +27,8 @@ YELLOW			:= \033[1;33m
 GREEN			:= \033[1;32m
 RED				:= \033[1;31m
 RESET			:= \033[0m
+#                 # <-- start here         | <-- middle             # <-- stop here
+HEADER_NAME 	= +                   * $(NAME) Compiled!                 #
 
 all: 		$(NAME)
 
@@ -31,8 +37,20 @@ $(NAME): 	$(OBJS)
 			@echo "${YELLOW}\t * Compiling ${NAME}\n${CYAN}"
 			ar -rcs $(NAME) $(OBJS)
 			@echo ""
-			@echo "\n\n\${GREEN}\t * $(NAME) Compiled!${RESET}"
-			@echo ""
+	@echo "${GREEN}\
+\n/* ************************************************************************** */\
+\n/*                                                                            */\
+\n/*            :::      ::::::::                                               */\
+\n/*          :+:      :+:    :+:                                               */\
+\n/*        +:+ +:+         +:+                      DONE...                    */\
+\n/*      +#+  +:+       +#+                                                    */\
+\n/*    +#+#+#+#+#+   +#${HEADER_NAME}*/\
+\n/*         #+#    #+#           By: caalbert <caalbert@student.42sp.org.br>   */\
+\n/*        ###   ########.fr                                                   */\
+\n/*                                                                            */\
+\n/* ************************************************************************** */\n\
+			${RESET}"
+	@echo ""
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
 			mkdir -p $(OBJS_DIR)
