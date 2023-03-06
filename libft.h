@@ -6,7 +6,7 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 04:39:39 by caalbert          #+#    #+#             */
-/*   Updated: 2023/03/04 23:48:00 by caalbert         ###   ########.fr       */
+/*   Updated: 2023/03/06 09:33:40 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct s_list
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *nptr);
+int		ft_atol(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
