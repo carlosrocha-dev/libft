@@ -28,6 +28,8 @@
 # define HEX_LOWER "0123456789abcdef"
 # define BUFFER_SIZE 1024
 # define MAX_FD 256
+# define INT_MAX 2147483647
+# define INT_MIN -(INT_MAX -1)
 
 /******************************************************************************\
 * STRUCTS
@@ -47,8 +49,9 @@ typedef struct s_list
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *nptr);
-int		ft_atol(const char *nptr);
+long	ft_atol(const char *nptr);
 void	ft_bzero(void *s, size_t n);
+void	ft_dlstclear(t_list **list);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
