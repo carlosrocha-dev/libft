@@ -37,10 +37,10 @@
 
 typedef struct s_list
 {
-	void			    *content;
+	void			*content;
 	struct s_list	*next;
-  struct s_list *prev;
-}	              t_list;
+	struct s_list 	*prev;
+}					t_list;
 
 /******************************************************************************\
 * FUNCTIONS
@@ -52,6 +52,7 @@ int		ft_atoi(const char *nptr);
 long	ft_atol(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	ft_dlstclear(t_list **list);
+void	ft_dlstdelone(t_list *lst, void (*del)(void *));
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
