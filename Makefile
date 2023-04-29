@@ -6,10 +6,10 @@
 #    By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 10:10:19 by caalbert          #+#    #+#              #
-#    Updated: 2023/03/04 16:57:03 by caalbert         ###   ########.fr        #
-#    Updated: 2023/03/04 23:51:48 by caalbert         ###   ########.fr        #
+#    Updated: 2023/04/29 16:30:04 by caalbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME		= libft.a
 CC			= cc
@@ -29,7 +29,7 @@ HEADER_NAME 	= +                   * $(NAME) Compiled!                 #
 
 all: 		$(NAME)
 
-$(NAME): 	$(OBJS)
+$(NAME): 	$(LIBFT) $(OBJS)
 			@echo ""
 			@echo "${YELLOW}\t * Compiling ${NAME}\n${CYAN}"
 			ar -rcs $(NAME) $(OBJS)
