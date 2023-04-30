@@ -6,12 +6,11 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 23:47:00 by caalbert          #+#    #+#             */
-/*   Updated: 2023/03/04 23:47:17 by caalbert         ###   ########.fr       */
+/*   Updated: 2023/04/30 10:53:36 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(int c)
+int	ft_isspace(char c)
 {
-	return (c == ' ' || c == '\t' || c == '\n' || \
-			c == '\r' || c == '\v' || c == '\f');
+	return (c == 32 || (c >= 9 && c <= 13));
 }
